@@ -48,8 +48,11 @@
     outline: none;
     border-radius: 50%;
     font-size: 3.2rem;
+    line-height: 200px;
+    text-align: center;
     cursor: pointer;
     position: relative;
+    text-decoration: none;
     color: var(--color-black);
     background-color: var(--color-white);
     z-index: 1;

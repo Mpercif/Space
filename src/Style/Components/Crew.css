@@ -39,9 +39,17 @@
     grid-column: 6/8;
     grid-row: 2/-1;
     place-self: center;
-    outline: 1px solid red;
     width: 100%;
     height: 100%;
+}
+
+.crew__img{
+    width: 100%;
+    height: 100%;
+    background-image: url("../../Assets/crew/image-anousheh-ansari.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 

@@ -43,6 +43,7 @@
     font-size: 1.6rem;
     line-height: 2.7;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .active{

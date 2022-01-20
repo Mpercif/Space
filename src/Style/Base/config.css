@@ -16,11 +16,12 @@
 }
 
 body{
-    background-image: url("../../Assets/home/background-home-desktop.jpg");
+    background-image: url("../../Assets/technology/background-technology-desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 90vh;
+    min-height: 90vh;
+    overflow: hidden;
 
 }
 

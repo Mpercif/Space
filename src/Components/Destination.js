@@ -18,7 +18,7 @@ export const Destination = () => {
                 <div className='planet__view'>
                     <h2 className='planet__subtitle'><span className='planet__number'>01</span>PICK YOUR DESTINATION </h2>
                     <picture className='planet__picture'>
-                        <img className='planet__img' src='../Assets/destionation/image-moon.png' alt='moon'/>
+                        <div className='planet__img' />
                     </picture>
                 </div>
                 <div className='planet__info'>

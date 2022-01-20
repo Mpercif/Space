@@ -33,7 +33,7 @@ export const Crew = () => {
                 </div>
             </div>
             <picture className='crew__picture'>
-                <img src={`${stateCrew.images.png}`} />
+                <div className='crew__img' />
             </picture>
         </main>;
 };
