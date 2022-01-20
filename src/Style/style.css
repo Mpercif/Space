@@ -1,0 +1,9 @@
+@import "../Style/Base/config.css";
+
+/* Componentes */ 
+
+@import "../Style/Components/Navbar.css";
+@import "../Style/Components/Home.css";
+@import "../Style/Components/Destination.css";
+@import "../Style/Components/Crew.css";
+@import "../Style/Components/Technology.css";

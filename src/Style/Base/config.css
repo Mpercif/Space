@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+:root{
+    --color-black: #0B0D17;
+    --color-blue: #D0D6F9;
+    --color-white: #FFFFFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bellefair', serif;
+    font-size: 10px;
+    user-select: none;
+}
+
+body{
+    background-image: url("../../Assets/home/background-home-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 90vh;
+
+}
+
+picture{
+    margin: 0;
+}

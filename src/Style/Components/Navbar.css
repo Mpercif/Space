@@ -1,0 +1,92 @@
+.navbar{
+    width: 100%;
+    height: 96px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__items{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0 1.6rem 0 rgba(0, 0, 0, .2); 
+    background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(223,223,223,1) 41%, rgba(255,255,255,1) 100%);
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+
+.navbar__items::after{
+    content: "";
+    position: absolute;
+    left: -85%;
+    width: 90%;
+    height: 1px;
+    border-radius: 30%;
+    background-color: var(--color-blue);
+}
+
+.item__container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.navbar__item{
+    color: var(--color-white);
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 2.7;
+    cursor: pointer;
+}
+
+.active{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-blue);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: clip-path 0.3s ease;
+}
+
+.navbar__item:hover + .active{
+    background-color: #d6d1d1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.navbar__item--active + .active{ 
+    background-color: var(--color-blue);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.navbar__item--active:hover + .active{
+    background-color: var(--color-blue);
+}
+
+
+.navbar__number{
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-right: 5px ;
+}
+
+.navbar__picture{
+    display: block;
+    margin-left: 50px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-image: url("/src/Assets/logo.svg");
+    background-position: center;
+    background-size: cover;
+
+}
+
