@@ -6,6 +6,7 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(5, 1fr);
     color: var(--color-white);
+    animation: show var(--time-animation) forwards;
 }
 
 .crew__texts{
@@ -15,6 +16,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, 1fr);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: normal;
 }
 
 
@@ -38,19 +41,48 @@
 .crew__picture{
     grid-column: 6/8;
     grid-row: 2/-1;
-    place-self: center;
     width: 100%;
     height: 100%;
+    place-self: center;
+    position: relative;
 }
 
 .crew__img{
     width: 100%;
     height: 100%;
-    background-image: url("../../Assets/crew/image-anousheh-ansari.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: absolute;
+    object-fit: cover;
+    transform: translateX(200%);
+    opacity: 0%;
+    transition: transform 300ms ease, opacity 1s 200ms ease ;
 }
+
+.crew__img--commander{
+    background-image: url("../../Assets/crew/image-douglas-hurley.png");
+    background-position: top;
+    transform: translateX(0%);
+    opacity: 100%;
+}
+.crew__img--mission{
+    background-image: url("../../Assets/crew/image-mark-shuttleworth.png");
+    background-position: top;
+    transform: translateX(0%);
+    opacity: 100%;
+}
+.crew__img--pilot{
+    background-image: url("../../Assets/crew/image-victor-glover.png");
+    transform: translateX(0%);
+    opacity: 100%;
+}
+.crew__img--flight{
+    background-image: url("../../Assets/crew/image-anousheh-ansari.png");
+    transform: translateX(0%);
+    opacity: 100%;
+}
+
 
 
 /* SECTION INFO */
@@ -78,9 +110,13 @@
     font-size: 1.8rem;
     width: 60%;
     line-height: 32px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: normal;
+    letter-spacing: 1.2px;
 }
 
 /* SECTION SELECTOR */
+
 .crew__selector{
     grid-column: 1/-1;
     grid-row: 8/-1;
@@ -95,8 +131,8 @@
 
 .crew__item{
     display: block;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     cursor: pointer;
     background-color: #979797;
@@ -108,4 +144,222 @@
 
 .crew__item--active{
     background-color: var(--color-white);
+}
+
+
+/* Viewport 768px */
+
+@media screen and (max-width: 768px) {
+    .crew__container{
+        min-height: 90vh;
+        grid-template-rows: repeat(7, minmax(100px, 135px));
+    }
+
+    .crew__texts{
+        grid-column: 1/-1;
+        grid-row: 1/4;
+        justify-self: center;
+        align-self: top;
+        grid-template-rows: repeat(8, 1fr);
+        text-align: center;
+    }
+
+    
+    .crew__subtitle{
+        grid-row: 1/2;
+        font-size: 2rem;
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .crew__pagragaph{
+        width: 83%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .crew__number{
+        font-size: 2rem;
+        margin-right: 1.2rem;
+    }
+
+    .crew__selector{
+        justify-content: center;
+        grid-row: 7/-1;
+    }    
+
+    .crew__item{
+        width: 15px;
+        height: 15px;
+        margin-right: 20px;
+    }
+
+    .crew__picture{
+        grid-column: 1/-1;
+        grid-row: 4/8;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .crew__img{
+        width: 50%;
+        height: 100%;
+    }
+
+    .crew__img--commander{
+        width: 60%;
+        height: 100%;
+    }
+
+    .crew__img--pilot{
+        width:  66%;
+        height: 100%;
+        background-position: bottom;
+    }
+    .crew__img--flight{
+        width: 73%;
+        height: 100%;
+    }
+}
+
+
+/* Viewport 375px */
+
+@media screen and (max-width: 375px) {
+    .crew__container{
+        min-height: 90vh;
+        grid-template-rows: repeat(7, minmax(40px, 1fr));
+    }
+
+    .crew__texts{
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        justify-self: center;
+        align-self: top;
+        grid-template-rows: repeat(8, 1fr);
+        text-align: center;
+    }
+
+    .crew__info{
+        grid-column: 1/-1;
+        grid-row: 5/-1;
+    }
+
+    .crew__subtitle{
+        grid-row: 1/2;
+        font-size: 2rem;
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .crew__pagragaph{
+        width: 83%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .crew__number{
+        font-size: 2rem;
+        margin-right: 1.2rem;
+    }
+
+    .crew__selector{
+        justify-content: center;
+        grid-row: 7/-1;
+    }    
+
+    .crew__item{
+        width: 15px;
+        height: 15px;
+        margin-right: 20px;
+    }
+
+    .crew__picture{
+        grid-column: 1/-1;
+        grid-row: 2/4;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .crew__img{
+        width: 50%;
+        height: 100%;
+    }
+
+    .crew__img--commander{
+        width: 60%;
+        height: 100%;
+    }
+
+    .crew__img--pilot{
+        width:  66%;
+        height: 100%;
+        background-position: bottom;
+    }
+    .crew__img--flight{
+        width: 73%;
+        height: 100%;
+    }
+}
+
+
+/* Viewport 425px */
+@media screen and (max-width: 425px) {
+
+    .crew__texts{
+        grid-row: 1/5;
+    }
+
+    .crew__role{
+        font-size: 2.5rem;
+    }
+
+    .crew__pagragaph{
+        width: 100%;
+        margin-top: 50px;
+        text-align: left;
+        font-size: 2rem;
+    }   
+
+    .crew__selector{
+        width: 90%;
+        height: 40px;
+        grid-row: 8/-1;
+        justify-content: space-around;
+    }
+
+    .crew__item{
+        width: 20px;
+        height: 20px;
+    }
+
+    .crew__picture{
+        width: 100%;
+        max-width: 400px;
+        grid-row: 5/-1;
+        grid-column: 1/-1;
+    }
+
+
+    .crew__img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .crew__img--commander{
+        width: 100%;
+        height: 100%;
+    }
+
+    .crew__img--pilot{
+        width:  90%;
+        height: 100%;
+        background-position: bottom;
+    }
+    .crew__img--flight{
+        width: 73%;
+        height: 100%;
+    }
 }

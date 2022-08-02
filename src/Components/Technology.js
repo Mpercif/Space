@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { data } from '../data/data';
+import { TechnologyImg } from './TechnologyImg';
 import { TechnologyInfo } from './TechnologyInfo';
 
 export const Technology = () => {
@@ -34,7 +35,14 @@ export const Technology = () => {
                 <TechnologyInfo tech={stateTech} />
             </div>
             <picture className='tech__picture'>
-                <div className='tech__img' />
+                {
+                    technology.map(tech => 
+                        <TechnologyImg 
+                            key={`${tech.name}-img`}
+                            tech={{tech, stateTech}} 
+                        />       
+                    )
+                }
             </picture>
         </main>
 };

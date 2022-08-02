@@ -35,8 +35,8 @@
 
 .home__paragraph{
     font-size: 1.8rem;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: normal;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 100;
     color: var(--color-blue);
 }
 
@@ -69,9 +69,123 @@
     border-radius: 50%;
     z-index: -1;
     transform: scale(0);
-    transition: transform 0.3s ease;
+    transition: transform 300ms 0s ease;
 }
 
 .home__cta:hover::before{
     transform: scale(1.3);
+}
+
+/* Viewport 768px */
+
+@media screen and (max-width: 768px) {
+    .home__container{
+        width: 100%;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .home__texts{
+        grid-column: 2/8;
+        grid-row: 1/4;
+        margin-top: 100px;
+    }
+
+    .home__subtitle{
+        text-align: center;
+        font-size: 2.4rem;
+        letter-spacing: 4.72px;
+    }
+    
+    .home__title{
+        font-size: 18rem;
+        text-align: center;
+    }
+    
+    .home__paragraph{
+        margin: 0 auto;
+        text-align: center;
+        max-width: 500px;
+        line-height: 2;
+        font-size: 1.8rem;
+    }
+
+    .home__button{
+        grid-column: 2/8;
+        grid-row: 4/6;
+        margin-top: 100px;
+    }
+
+    .home__cta{
+        width: 200px;
+        height: 200px;
+        font-size: 3.2rem;
+        line-height: 200px;
+    }
+}
+
+/* Viewport 375px */
+
+@media screen and (max-width: 375px) {
+    .home__container{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 290px);
+    }
+
+    .home__texts{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        place-self: center;
+        margin: 0;
+    }
+
+    .home__subtitle{
+        font-size: 1.6rem;
+        letter-spacing: 4.72px;
+    }
+    
+    .home__title{
+        font-size: 8rem;
+    }
+    
+    .home__paragraph{
+        margin-top: 10px;
+        max-width: 340px;
+        line-height: 1.5;
+        font-size: 1.5rem;
+    }
+
+    .home__button{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        margin: 0px;
+    }
+
+    .home__cta{
+        width: 150px;
+        height: 150px;
+        font-size: 2.5rem;
+        line-height: 150px;
+        margin-top: 20px;
+    }
+}
+
+
+/* Viewport 425px */
+@media screen and (max-width: 425px) {
+    .home__title{
+        font-size: 10rem;
+    }
+
+    .home__paragraph{
+        font-size: 2rem;
+        margin-top: 50px;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .home__button{
+        margin-top: 10px;
+    }
 }
