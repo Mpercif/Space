@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { data } from '../data/data';
+import { CrewImgPeople } from './CrewImgPeople';
 import { CrewPeople } from './CrewPeople';
 
 export const Crew = () => {
@@ -32,8 +33,15 @@ export const Crew = () => {
                     )}
                 </div>
             </div>
-            <picture className='crew__picture'>
-                <div className='crew__img' />
-            </picture>
+                <picture className='crew__picture'>
+                {
+                    crew.map(people => 
+                        <CrewImgPeople  
+                            key={`${people.name}_img `}
+                            information={{people, stateCrew}} 
+                        />
+                    )
+                }
+                </picture>
         </main>;
 };

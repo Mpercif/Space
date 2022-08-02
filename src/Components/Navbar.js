@@ -4,11 +4,27 @@ import { Link, useLocation} from 'react-router-dom';
 export const Navbar = () => {
     const {pathname} = useLocation()  
     const routeActual = pathname.split("/")
+    const [stateShowNavBar, setStateShowNavBar] = useState(false)
+    const showNavBarItems = ()=>{
+        setStateShowNavBar(!stateShowNavBar)
+    }
 
   return <header className='navbar'>
-            <picture className='navbar__picture'>
+            <picture 
+                className={
+                    stateShowNavBar
+                    ? 'navbar__picture'
+                    : 'navbar__picture navbar--show'
+                }
+                onClick={showNavBarItems}
+            >
             </picture>
-            <nav className='navbar__items'>
+            <nav className={
+                stateShowNavBar
+                ? 'navbar__items'
+                : 'navbar__items navbar--show'
+            }
+            >
                 <div className='item__container'>
                     <Link to="/" 
                         className={

@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { data } from '../data/data';
+import { ImagePlanets } from './ImagePlanets';
 import { InformationPlanet } from './InformationPlanet';
 
 export const Destination = () => {
 
     const {destinations} = data;
     const [planetInfo, setInfo] = useState(destinations[0])
+    const [classActive, setClassActive] = useState('moon')
 
     const handleClick = (e)=>{
         const name = e.target.dataset.id;
         const [newInfo] = destinations.filter(val => val.name === name);
         setInfo(newInfo);
+        setClassActive(newInfo.name.toLowerCase());
     }
 
 
@@ -18,7 +21,14 @@ export const Destination = () => {
                 <div className='planet__view'>
                     <h2 className='planet__subtitle'><span className='planet__number'>01</span>PICK YOUR DESTINATION </h2>
                     <picture className='planet__picture'>
-                        <div className='planet__img' />
+                        {
+                            destinations.map(planet => 
+                                <ImagePlanets 
+                                    key={`${planet.name}_img`}
+                                    planetInfo={{planet, classActive}} 
+                                />
+                            )
+                        }
                     </picture>
                 </div>
                 <div className='planet__info'>
@@ -32,7 +42,6 @@ export const Destination = () => {
                                             ? 'planet__name planet__name--active' 
                                             : 'planet__name' 
                                         } 
-                                href='#'
                                 onClick={handleClick}
                             >
                                 {destiny.name.toLocaleUpperCase()} 

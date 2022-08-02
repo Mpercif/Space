@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    animation: show var(--time-animation) forwards;
 }
 
 /* SECTION TECH SUBTITLE*/
@@ -121,6 +122,8 @@
     color: var(--color-blue);
     line-height: 1.5;
     font-size: 1.8rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: normal;
 }
 
 
@@ -133,9 +136,7 @@
 }
 
 .tech__img{
-    
     display: block;
-    background-image: url("../../Assets/technology/image-launch-vehicle-portrait.jpg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -143,23 +144,156 @@
     height: 100%;
     object-fit: cover;
     position: absolute;
-    right: -150px;
+    transform: translateX(200%);
+    transition: transform 300ms ease;
 }
 
-@keyframes load {
-    from{
-        clip-path: var(--clip-init);
+.tech__img--launch{
+    background-image: url("../../Assets/technology/image-launch-vehicle-portrait.jpg");
+    transform: translateX(30%);
+}
+.tech__img--spaceport{
+    background-image: url("../../Assets/technology/image-spaceport-portrait.jpg");
+    transform: translateX(30%);
+}
+.tech__img--space{
+    background-image: url("../../Assets/technology/image-space-capsule-portrait.jpg");
+    transform: translateX(30%);
+}
+
+/* Viewport 768px */
+
+@media screen and (max-width: 768px) {
+    .tech__container{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(10, 92px);
+        animation: show var(--time-animation) forwards;
     }
-    to{
-        clip-path: var(--clip-finish);
+
+    .tech__subtitle{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        font-size: 2rem;
+        padding: 0px;
+        width: 100%;
+        margin-bottom: 0px;
+        margin-top: 30px;
+    }
+
+    .tech__info{
+        grid-column: 1/-1;
+        grid-row: 5/-1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+
+    /* SECTION TECH ITEM */
+
+    .tech__items{
+        grid-column: 1/-1;
+        grid-row: 1/3;
+        align-self: flex-end;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tech__item{
+        margin-right: 20px;
+        margin-bottom: 0px;
+    }
+
+    /* SECTION TECH INFO */
+
+    .techInfo__container{
+        color: white;
+        grid-column: 1/-1;
+        grid-row: 4/-1;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .techInfo__subtitle{
+        font-size: 2rem;
+        letter-spacing: 2.7px;
+        font-weight: normal;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: var(--color-blue);
+        margin-bottom: 16px;
+    }
+
+    .techInfo__name{
+        font-size: 5.2rem;
+        color: var(--color-white);
+        font-weight: normal;
+        margin-bottom: 17px;
+    }
+
+    .techInfo__paragraph{
+        width: 75%;
+        margin: 0 auto;
+        letter-spacing: 1.2px;
+    }
+
+    .tech__picture{
+        grid-column: 1/-1;
+        grid-row: 2/5;
+    }
+    
+    .tech__img{
+        background-size: auto;
+        background-position: bottom;
+        width: 150%;
+        transform: translateX(100%);
+    }
+
+    .tech__img--launch{
+        background-image: url("../../Assets/technology/image-launch-vehicle-landscape.jpg");
+        transform: translateX(-170px);
+    }
+    .tech__img--spaceport{
+        background-image: url("../../Assets/technology/image-spaceport-landscape.jpg");
+        transform: translateX(-170px);
+    }
+    .tech__img--space{
+        background-image: url("../../Assets/technology/image-space-capsule-landscape.jpg");
+        transform: translateX(-170px);
     }
 }
 
-@keyframes finish {
-    from{
-        clip-path: var(--clip-finish);
+/* Viewport 425px */
+@media screen and (max-width: 425px) {
+    .tech__items{
+        justify-content: space-around;
     }
-    to{
-        clip-path: var(--clip-init);
+
+    .techInfo__container{
+        grid-row: 3/-1;
+    }
+
+    .techInfo__subtitle{
+        margin-top: 25px;
+    }
+
+    .techInfo__name{
+        font-size: 4rem;
+        margin-top: 30px;
+    }
+
+    .techInfo__paragraph{
+        text-align: left;
+        font-weight: 100;
+        font-size: 2rem;
+        margin: 0;
+        margin-top: 30px;
+        width: 100%;
+        line-height: 1.6;
+        letter-spacing: 1.5px;
     }
 }
