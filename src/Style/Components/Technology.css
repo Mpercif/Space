@@ -149,15 +149,15 @@
 }
 
 .tech__img--launch{
-    background-image: url("../../../public/Assets/technology/image-launch-vehicle-portrait.jpg");
+    background-image: url("./../../Assets/technology/image-launch-vehicle-portrait.jpg");
     transform: translateX(30%);
 }
 .tech__img--spaceport{
-    background-image: url("../../../public/Assets/technology/image-spaceport-portrait.jpg");
+    background-image: url("./../../Assets/technology/image-spaceport-portrait.jpg");
     transform: translateX(30%);
 }
 .tech__img--space{
-    background-image: url("../../../public/Assets/technology/image-space-capsule-portrait.jpg");
+    background-image: url("./../../Assets/technology/image-space-capsule-portrait.jpg");
     transform: translateX(30%);
 }
 
@@ -254,15 +254,15 @@
     }
 
     .tech__img--launch{
-        background-image: url("../../../public/Assets/technology/image-launch-vehicle-landscape.jpg");
+        background-image: url("./../../Assets/technology/image-launch-vehicle-landscape.jpg");
         transform: translateX(-170px);
     }
     .tech__img--spaceport{
-        background-image: url("../../../public/Assets/technology/image-spaceport-landscape.jpg");
+        background-image: url("./../../Assets/technology/image-spaceport-landscape.jpg");
         transform: translateX(-170px);
     }
     .tech__img--space{
-        background-image: url("../../../public/Assets/technology/image-space-capsule-landscape.jpg");
+        background-image: url("./../../Assets/technology/image-space-capsule-landscape.jpg");
         transform: translateX(-170px);
     }
 }
