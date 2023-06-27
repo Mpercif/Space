@@ -61,24 +61,24 @@
 }
 
 .crew__img--commander{
-    background-image: url("../../Assets/crew/image-douglas-hurley.png");
+    background-image: url("../../../public/Assets/crew/image-douglas-hurley.png");
     background-position: top;
     transform: translateX(0%);
     opacity: 100%;
 }
 .crew__img--mission{
-    background-image: url("../../Assets/crew/image-mark-shuttleworth.png");
+    background-image: url("../../../public/Assets/crew/image-mark-shuttleworth.png");
     background-position: top;
     transform: translateX(0%);
     opacity: 100%;
 }
 .crew__img--pilot{
-    background-image: url("../../Assets/crew/image-victor-glover.png");
+    background-image: url("../../../public/Assets/crew/image-victor-glover.png");
     transform: translateX(0%);
     opacity: 100%;
 }
 .crew__img--flight{
-    background-image: url("../../Assets/crew/image-anousheh-ansari.png");
+    background-image: url("../../../public/Assets/crew/image-anousheh-ansari.png");
     transform: translateX(0%);
     opacity: 100%;
 }

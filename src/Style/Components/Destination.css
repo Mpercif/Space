@@ -55,19 +55,19 @@
 }
 
 .planet__img--active--moon{
-    background-image: url("../../../src/Assets/destination/image-moon.png");
+    background-image: url("../../../public/Assets/destination/image-moon.png");
 }
 
 .planet__img--active--mars{
-    background-image: url("../../../src/Assets/destination/image-mars.png");
+    background-image: url("../../../public/Assets/destination/image-mars.png");
 }
 
 .planet__img--active--europa{
-    background-image: url("../../../src/Assets/destination/image-europa.png");
+    background-image: url("../../../public/Assets/destination/image-europa.png");
 }
 
 .planet__img--active--titan{
-    background-image: url("../../../src/Assets/destination/image-titan.png");
+    background-image: url("../../../public/Assets/destination/image-titan.png");
 }
 
 .planet--active{
